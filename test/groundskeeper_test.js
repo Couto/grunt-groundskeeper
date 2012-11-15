@@ -1,3 +1,5 @@
+/*jshint strict:false*/
+
 var grunt = require('grunt');
 
 /*

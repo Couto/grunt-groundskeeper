@@ -8,6 +8,8 @@
 
 module.exports = function(grunt) {
 
+  'use strict';
+
   // Please see the grunt documentation for more information regarding task and
   // helper creation: https://github.com/gruntjs/grunt/blob/master/docs/toc.md
 

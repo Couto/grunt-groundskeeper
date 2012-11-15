@@ -33,7 +33,15 @@
     "grunt": "~0.3.17"
   },
   "keywords": [
-    "gruntplugin"
+    "gruntplugin",
+    "console",
+    "logging",
+    "remove",
+    "clean",
+    "groundskeeper",
+    "debugger",
+    "pragmas",
+    "pragma"
   ],
   "dependencies": {
     "groundskeeper": "~0.1.0"
