@@ -39,8 +39,11 @@ module.exports = function (grunt) {
         grunt.file.expand(glob).forEach(function (file) {
           var cleaner = groundskeeper(self.options);
           cleaner.write(grunt.file.read(file));
-          console.log(filePaths.dest, file)
-          grunt.file.write((filePaths.dest + path.sep + file), cleaner.toString())
+
+          grunt.file.write(
+            path.normalize(filePaths.dest + path.sep + file),
+            cleaner.toString()
+          );
         });
       });
     });

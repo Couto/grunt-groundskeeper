@@ -45,6 +45,7 @@
   ],
   "dependencies": {
     "groundskeeper": "~0.1.0",
-    "grunt-lib-contrib": "~0.3.1"
+    "grunt-lib-contrib": "~0.3.1",
+    "grunt": "~0.3.17"
   }
 }
