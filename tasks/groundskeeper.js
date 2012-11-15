@@ -26,33 +26,28 @@ module.exports = function (grunt) {
         path = require('path'),
         groundskeeper = require('groundskeeper'),
         helpers = require('grunt-lib-contrib').init(grunt),
-        filePaths = [],
-        sourceFile = '',
-        source = '',
-        cleaner = {};
+        cleaner = {},
+        self = this; // Too lazy to .bind a bunch of functions
 
     this.options = helpers.options(this);
 
     // TODO: ditch this when grunt v0.4 is released
-    this.files = this.files = this.files || helpers.normalizeMultiTaskFiles(this.data, this.target);
+    this.files = this.files || helpers.normalizeMultiTaskFiles(this.data, this.target);
 
-    this.files.forEach(function (file) {
-
-      grunt.file
-        .expandFiles(file.src)
-        .forEach(function (sourceFile) {
-          source = grunt.file.read(sourceFile),
-          cleaner = groundskeeper(this.options);
-
-          cleaner.write(source);
-          grunt.file.write(file.dest, cleaner.toString());
-
+    this.files.forEach(function (filePaths) {
+      filePaths.src.forEach(function (glob) {
+        grunt.file.expand(glob).forEach(function (file) {
+          var cleaner = groundskeeper(self.options);
+          cleaner.write(grunt.file.read(file));
+          console.log(filePaths.dest, file)
+          grunt.file.write((filePaths.dest + path.sep + file), cleaner.toString())
+        });
       });
     });
 
 
-    console.log(this.options);
-    console.log(this.files);
+
+
 
   });
 
