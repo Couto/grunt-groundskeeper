@@ -66,7 +66,7 @@ groundskeeper: {
     src: ['scripts/**/*.js'],
     dest: 'web'
 }
-
+```
 will result in the following directory structure.
 
 ```
