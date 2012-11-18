@@ -22,7 +22,7 @@ In your `grunt.js` file, inside the `grunt.initConfig` object,  add a key named 
 ### Parameters
 
 __identifier__ : `Object`
-You can provide multiple configuration options, by default `grunt` will run them all, but you can specify which one you want to run alone:
+You can provide multiple configuration options, by default `grunt` will run them all, but you can specify which one you want to run alone, by calling `groundskeeper:identifier`
 
 ```javascript
 grunt.initConfig({
@@ -51,7 +51,9 @@ groundskeeper: {
         dest: 'web/scripts'
     },
     keepPragmas: {
-        pragmas: ['validation', 'development'],
+        options: {
+          pragmas: ['validation', 'development'],
+        },
         src: ['app/**/*.js', 'vendor/\*\*/*.js'],
         dest: 'dev'
     }
@@ -70,6 +72,7 @@ groundskeeper: {
 will result in the following directory structure.
 
 ```
+
  | - scripts
  | | - modules
  | | - libs
@@ -78,6 +81,7 @@ will result in the following directory structure.
  | | - scripts
  | | | -modules
  | | | -libs
+
 ```
 
 
