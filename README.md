@@ -33,7 +33,7 @@ grunt.initConfig({
 });
 ```
 
-Each configuration accepts three parameters:
+Each configuration accepts four parameters:
 
  * __options__ : `Object`. Options given to `groundskeeper`
    * __console__ : `Boolean`. If true, keeps `console` statements,
@@ -43,6 +43,7 @@ Each configuration accepts three parameters:
    * __replace__ : `String`. Replace `console` and `namespace` with the given string.
  * __src__ : `Array`. Files/globs indicating which files will be cleaned up.
  * __dest__ : `String`. Output folder where cleaned files will end up.
+ * __keepStructure__ : `Boolean`. Keep structure when moving files to dest folder.
 
 ```javascript
 groundskeeper: {
@@ -55,12 +56,13 @@ groundskeeper: {
           pragmas: ['validation', 'development'],
         },
         src: ['app/**/*.js', 'vendor/\*\*/*.js'],
-        dest: 'dev'
+        dest: 'dev',
+        keepStructure: true
     }
 }
 ```
 
-`groundskeeper` will mirror your folder structure in the output folder.
+if __keepStructure__ is `true`, `groundskeeper` will mirror your folder structure in the output folder.
 
 e.g.:
 ```
@@ -78,9 +80,8 @@ will result in the following directory structure.
  | | - libs
  |
  | - web
- | | - scripts
- | | | -modules
- | | | -libs
+ | | -modules
+ | | -libs
 
 ```
 
@@ -93,7 +94,6 @@ __0.0.1__
  * Basic wrapper around [groundskeeper](http://github.com/Couto/groundskeeper.git)
 
 ## TODO
- * Provide more output options
  * Make tests
  * Provide examples
 
