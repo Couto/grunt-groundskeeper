@@ -90,6 +90,9 @@ will result in the following directory structure.
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [grunt][grunt].
 
 ## Release History
+__0.0.2__
+ * Provide more output options
+
 __0.0.1__
  * Basic wrapper around [groundskeeper](http://github.com/Couto/groundskeeper.git)
 
