@@ -1,3 +1,5 @@
+var glob = require('glob');
+
 module.exports = function (grunt) {
 
     'use strict';
@@ -26,11 +28,12 @@ module.exports = function (grunt) {
     });
 
     // Load tasks.
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-nodeunit');
-    grunt.loadNpmTasks('grunt-contrib-jshint');
+    glob.sync('node_modules/grunt-*').map(function (task) {
+        return task.replace('node_modules/', '');
+    }).forEach(grunt.loadNpmTasks);
 
     // Default task.
     grunt.registerTask('test', ['jshint', 'nodeunit']);
     grunt.registerTask('default', ['jshint', 'nodeunit']);
+
 };
