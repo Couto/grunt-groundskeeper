@@ -14,16 +14,14 @@ module.exports = function (grunt) {
         // Depedencies
         var path = require('path'),
             groundskeeper = require('groundskeeper'),
-            helpers = require('grunt-lib-contrib').init(grunt),
             cleaner = {},
             self = this; // Too lazy to .bind a bunch of functions
 
-
-        grunt.file.expand(this.file.src).forEach(function (file) {
+        this.filesSrc.forEach(function (file) {
             var dest = (!this.data.keepStructure) ?
-                    this.file.dest + path.sep + path.basename(file) :
+                    this.files.dest + path.sep + path.basename(file) :
                     path.resolve(
-                        this.file.dest,
+                        this.files.dest,
                         file.split(path.sep)
                             .splice(1)
                             .join(path.sep)
@@ -33,7 +31,5 @@ module.exports = function (grunt) {
                 grunt.file.write(dest, cleaner.toString());
 
         }, this);
-
     });
-
 };
