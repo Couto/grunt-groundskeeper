@@ -11,28 +11,43 @@ module.exports = function (grunt) {
 
     grunt.registerMultiTask('groundskeeper', 'Remove logging statements, debuggers and pragmas', function () {
 
-        // Depedencies
-        var path = require('path'),
-            groundskeeper = require('groundskeeper'),
-            helpers = require('grunt-lib-contrib').init(grunt),
-            cleaner = {},
-            self = this; // Too lazy to .bind a bunch of functions
+        var groundskeeper = require('groundskeeper'),
+            options = this.options({ separator: grunt.util.linefeed }),
+            clean = function (file) {
+                var cleaner = groundskeeper(options),
+                    source = grunt.file.read(file);
+
+                cleaner.write(source);
+                return cleaner.toString();
+            };
+
+        grunt.verbose.writeflags(options, 'Options');
+
+        this.files.forEach(function (files) {
+
+            var output = files.src.filter(function (filepath) {
+
+                // Check if file exists
+                if (!grunt.file.exists(filepath)) {
+                    grunt.log.warn('Source file "' + filepath + '" not found.');
+                    return false;
+                }
+
+                return true;
+
+            // Clean the file and normalize file endings
+            }).map(clean).join(grunt.util.normalizelf(options.separator));
 
 
-        grunt.file.expand(this.file.src).forEach(function (file) {
-            var dest = (!this.data.keepStructure) ?
-                    this.file.dest + path.sep + path.basename(file) :
-                    path.resolve(
-                        this.file.dest,
-                        file.split(path.sep)
-                            .splice(1)
-                            .join(path.sep)
-                        ),
-                cleaner = groundskeeper(this.data.options);
-                cleaner.write(grunt.file.read(file));
-                grunt.file.write(dest, cleaner.toString());
+            // Write the file
+            grunt.file.write(files.dest, output);
 
-        }, this);
+            // Warn if file was empty or correctly created
+            return (output.length < 1) ?
+                    grunt.log.warn('File ' + files.dest + ' created empty, because its counterpart was empty.') :
+                    grunt.log.ok('File ' + files.dest + ' created.');
+
+        });
 
     });
 

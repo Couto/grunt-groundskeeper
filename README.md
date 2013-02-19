@@ -1,105 +1,105 @@
-# grunt-groundskeeper
+# grunt-groundskeeper [![Build Status](https://secure.travis-ci.org/Couto/grunt-groundskeeper.png?branch=dev)](http://travis-ci.org/gruntjs/grunt-groundskeeper)
 
-Basic [gruntjs](https://github.com/gruntjs/grunt) task, wrapping aroung [groundskeeper](https://github.com/Couto/groundskeeper) to allow users to remove `console`, `debugger;`, specified pragmas and their own logging statements.
+> Remove console statements, debugger and specific blocks of code
+
 
 
 ## Getting Started
-Install this grunt plugin next to your project's [grunt.js gruntfile][getting_started] with: `npm install grunt-groundskeeper`
+This plugin requires Grunt `~0.4.0`
 
-Then add this line to your project's `grunt.js` gruntfile:
+If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:
 
-```javascript
+```shell
+npm install grunt-groundskeeper --save-dev
+```
+
+One the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:
+
+```js
 grunt.loadNpmTasks('grunt-groundskeeper');
 ```
 
-[grunt]: http://gruntjs.com/
-[getting_started]: https://github.com/gruntjs/grunt/blob/master/docs/getting_started.md
+*This plugin was designed to work with Grunt 0.4.x. If you're still using grunt v0.3.x it's strongly recommended that [you upgrade](http://gruntjs.com/upgrading-from-0.3-to-0.4), but in case you can't please use [v0.3.2](https://github.com/gruntjs/grunt-contrib-coffee/tree/grunt-0.3-stable).*
 
-## Documentation
 
-In your `grunt.js` file, inside the `grunt.initConfig` object,  add a key named `groundskeeper`. This section specifies the files to clean up with [groundskeeper](http://github.com/Couto/groundskeeper.git)
 
-### Parameters
+## Groundskeeper task
+_Run this task with the `grunt groundskeeper` command._
 
-__identifier__ : `Object`
-You can provide multiple configuration options, by default `grunt` will run them all, but you can specify which one you want to run alone, by calling `groundskeeper:identifier`
+Task targets, files and options may be specified according to the grunt [Configuring tasks](http://gruntjs.com/configuring-tasks) guide.
 
-```javascript
-grunt.initConfig({
-    groundskeeper: {
-        cleanall: {},
-        keepPragmas: {}
-    }
-});
-```
+### Options
 
-Each configuration accepts four parameters:
+For a more detailed description of the available options please refer to the [groundskeeper's usage](https://github.com/Couto/groundskeeper#usage)
 
- * __options__ : `Object`. Options given to `groundskeeper`
-   * __console__ : `Boolean`. If true, keeps `console` statements,
-   * __debugger__ : `Boolean`. if true keeps `debugger;` statements,
-   * __pragmas__ : `Array`. Specified pragmas will be keep in the final file
-   * __namespace__ : `String`. If you use your own logging utility, specify it's namespace.
-   * __replace__ : `String`. Replace `console` and `namespace` with the given string.
- * __src__ : `Array`. Files/globs indicating which files will be cleaned up.
- * __dest__ : `String`. Output folder where cleaned files will end up.
- * __keepStructure__ : `Boolean`. Keep structure when moving files to dest folder.
+#### console
+Type: `boolean`
 
-```javascript
+If true, it will keep `console` statements.
+
+#### debugger
+Type: `boolean`
+
+If true, it will keep `debugger;` statements.
+
+#### pragmas
+Type: `Array`
+
+It will keep pragmas with the specified identifiers.
+
+#### namespace
+Type: `Array`
+
+Remove custom logging utilities that live in the given namespace.
+
+#### replace
+Type: `String`
+
+If the simple removal of statements causes errors, use this option to replace them for a given string.
+
+### Usage Examples
+
+```js
 groundskeeper: {
-    cleanall: {
-        src: ['app/scripts/*.js'],
-        dest: 'web/scripts'
+  compile: {
+    files: {
+      'path/to/result.js': 'path/to/source.js', // 1:1 compile
+      'path/to/another.js': ['path/to/sources/*.js', 'path/to/more/*.js'] // clean up and concat into single file
     },
-    keepPragmas: {
-        options: {
-          pragmas: ['validation', 'development'],
-        },
-        src: ['app/**/*.js', 'vendor/\*\*/*.js'],
-        dest: 'dev',
-        keepStructure: true
+    options: {  // this options only affect the compile task
+        console: false
     }
+  },
+
+  glob_to_multiple: { // if multiple files are given, this will keep the same folder structure and files
+    expand: true,
+    cwd: 'path/to',
+    src: ['*.js'],
+    dest: 'path/to/dest/',
+    ext: '.js'
+  },
+
+  options: {
+    console: true,                          // don't remove console statements
+    debugger: true,                         // don't remove debugger statements
+    pragmas: ['development', 'validation'], // don't remove `development` and `validation` pragmas
+    namespace: ['App.logger'],              // Remove functions that live inside the App.logger namespace
+    replace: '"0"'                          // Replace removed statements for the given string (note the extra quotes)
+  }
 }
 ```
 
-if __keepStructure__ is `true`, `groundskeeper` will mirror your folder structure in the output folder.
+For more examples on how to use the `expand` API shown in the `glob_to_multiple` example, see "Building the files object dynamically" in the grunt wiki entry [Configuring Tasks](http://gruntjs.com/configuring-tasks).
 
-e.g.:
-```
-groundskeeper: {
-    src: ['scripts/**/*.js'],
-    dest: 'web'
-}
-```
-will result in the following directory structure.
-
-```
-
- | - scripts
- | | - modules
- | | - libs
- |
- | - web
- | | -modules
- | | -libs
-
-```
-
-
-## Contributing
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [grunt][grunt].
 
 ## Release History
-__0.0.2__
- * Provide more output options
 
-__0.0.1__
- * Basic wrapper around [groundskeeper](http://github.com/Couto/groundskeeper.git)
+ * 2013-02-20   v0.1.3   Fix compatibility with grunt 0.4. Remove 'keepStructure' option.
+ * 2012-12-14   v0.1.2   Provide more output options. 
+ * 2012-12-14   v0.1.1   Provide options and documentation.
+ * 2012-12-14   v0.1.0   First functional wrapper around groundskeeper. 
+---
 
-## TODO
- * Make tests
- * Provide examples
+Task submitted by [Luis Couto](http://15minuteslate.net)
 
-## License
-Copyright (c) 2012 Couto
-Licensed under the MIT license.
+*This file was generated on Wed Feb 20 2013 15:25:29.*

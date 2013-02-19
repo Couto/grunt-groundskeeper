@@ -1,0 +1,11 @@
+v0.1.0:
+    date: 2013-02-20 
+    changes:
+        - Add build status badge
+        - Rename Gruntfile.js
+        - Update .travis.yml to install grunt
+        - Add tests
+        - Add support for dynamic mappings
+        - Fix compatibility with grunt 0.4 (issue #1).
+        - Update README.md
+        - Update deps
