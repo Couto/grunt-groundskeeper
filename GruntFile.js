@@ -4,20 +4,21 @@ module.exports = function (grunt) {
 
     // Project configuration.
     grunt.initConfig({
-        test: {
-            files: ['test/**/*.js']
-        },
-
-        lint: {
-            files: ['grunt.js', 'tasks/**/*.js', 'test/**/*.js']
+        nodeunit: {
+            all: ['test/**/*.js']
         },
 
         watch: {
-            files: '<config:lint.files>',
-            tasks: 'default'
+            gruntfile: {
+                files: ['<%= jshint.gruntfile %>'],
+                tasks: ['jshint:gruntfile']
+            }
         },
 
         jshint: {
+            files: {
+                src: ['grunt.js', 'tasks/**/*.js', 'test/**/*.js']
+            },
             options: {
                 'bitwise'   : true,
                 'camelcase' : true,
@@ -86,10 +87,11 @@ module.exports = function (grunt) {
         }
     });
 
-    // Load local tasks.
-    grunt.loadTasks('tasks');
+    // Load tasks.
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-nodeunit');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
 
     // Default task.
-    grunt.registerTask('default', 'lint test');
-
+    grunt.registerTask('default', ['jshint', 'nodeunit']);
 };
