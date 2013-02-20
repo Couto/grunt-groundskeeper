@@ -1,4 +1,4 @@
-# grunt-groundskeeper [![Build Status](https://secure.travis-ci.org/Couto/grunt-groundskeeper.png?branch=dev)](http://travis-ci.org/gruntjs/grunt-groundskeeper)
+# grunt-groundskeeper [![Build Status](https://secure.travis-ci.org/Couto/grunt-groundskeeper.png?branch=master)](http://travis-ci.org/gruntjs/grunt-groundskeeper)
 
 > Remove console statements, debugger and specific blocks of code
 
@@ -98,6 +98,7 @@ For more examples on how to use the `expand` API shown in the `glob_to_multiple`
  * 2012-12-14   v0.1.2   Provide more output options. 
  * 2012-12-14   v0.1.1   Provide options and documentation.
  * 2012-12-14   v0.1.0   First functional wrapper around groundskeeper. 
+
 ---
 
 Task submitted by [Luis Couto](http://15minuteslate.net)
