@@ -95,9 +95,9 @@ For more examples on how to use the `expand` API shown in the `glob_to_multiple`
 ## Release History
 
  * 2013-02-20   v0.1.3   Fix compatibility with grunt 0.4. Remove 'keepStructure' option.
- * 2012-12-     v0.1.2   Provide more output options. 
- * 2012-12-     v0.1.1   
- * 2012-12-     v0.1.0   First functional wrapper around groundskeeper 
+ * 2012-12-14   v0.1.2   Provide more output options. 
+ * 2012-12-14   v0.1.1   Provide options and documentation.
+ * 2012-12-14   v0.1.0   First functional wrapper around groundskeeper. 
 ---
 
 Task submitted by [Luis Couto](http://15minuteslate.net)
