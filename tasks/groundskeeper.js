@@ -11,8 +11,7 @@ module.exports = function (grunt) {
 
     grunt.registerMultiTask('groundskeeper', 'Remove logging statements, debuggers and pragmas', function () {
 
-        var path = require('path'),
-            groundskeeper = require('groundskeeper'),
+        var groundskeeper = require('groundskeeper'),
             options = this.options({ separator: grunt.util.linefeed }),
             clean = function (file) {
                 var cleaner = groundskeeper(options),
@@ -44,7 +43,7 @@ module.exports = function (grunt) {
             grunt.file.write(files.dest, output);
 
             // Warn if file was empty or correctly created
-            return (output.length < 1 ) ?
+            return (output.length < 1) ?
                     grunt.log.warn('File ' + files.dest + ' created empty, because its counterpart was empty.') :
                     grunt.log.ok('File ' + files.dest + ' created.');
 

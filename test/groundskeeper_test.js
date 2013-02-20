@@ -1,7 +1,16 @@
 (function () {
     'use strict';
 
-    var grunt = require('grunt');
+    var grunt = require('grunt'),
+        load = function (file) {
+            var contents = grunt.file.read(file);
+
+            if (process.platform === 'win32') {
+                contents = contents.replace(/\r\n/g, '\n');
+            }
+
+            return contents;
+        };
 
     /*
       ======== A Handy Little Nodeunit Reference ========
@@ -24,16 +33,19 @@
     */
 
     return exports.groundskeeper = {
-        setUp: function (done) {
-            // setup here
-            done();
-        },
-        'helper': function (test) {
+
+        clean: function (test) {
+            var actual = load('tmp/console.js'),
+                expected = load('test/expected/console.js');
+
             test.expect(1);
-            // tests here
-            test.equal(grunt.helper('groundskeeper'), 'groundskeeper!!!', 'should return the correct value.');
+
+            test.equal(expected, actual, 'should clean up all existing console statements');
+
             test.done();
+
         }
+
     };
 
 }());

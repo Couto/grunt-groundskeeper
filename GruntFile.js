@@ -7,7 +7,7 @@ module.exports = function (grunt) {
     // Project configuration.
     grunt.initConfig({
         nodeunit: {
-            all: ['test/**/*.js']
+            tests: ['test/*_test.js']
         },
 
         watch: {
@@ -17,12 +17,26 @@ module.exports = function (grunt) {
             }
         },
 
+        clean: {
+            tests: ['tmp']
+        },
+
         jshint: {
-            files: {
-                src: ['grunt.js', 'tasks/**/*.js', 'test/**/*.js']
-            },
+            all: [
+                'GruntFile.js',
+                'tasks/**/*.js',
+                '<%= nodeunit.tests %>'
+            ],
             options: {
-                'jshintrc'  : '.jshintrc'
+                'jshintrc' : '.jshintrc'
+            }
+        },
+
+        groundskeeper: {
+            clean: {
+                files: {
+                    'tmp/console.js': ['test/fixtures/console.js']
+                }
             }
         }
     });
@@ -32,8 +46,11 @@ module.exports = function (grunt) {
         return task.replace('node_modules/', '');
     }).forEach(grunt.loadNpmTasks);
 
+    // Also load this plugin's task(s).
+    grunt.loadTasks('tasks');
+
     // Default task.
-    grunt.registerTask('test', ['jshint', 'nodeunit']);
+    grunt.registerTask('test', ['clean', 'jshint', 'groundskeeper', 'nodeunit']);
     grunt.registerTask('default', ['jshint', 'nodeunit']);
 
 };
