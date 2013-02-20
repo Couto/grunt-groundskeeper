@@ -9,12 +9,20 @@ groundskeeper: {
     }
   },
 
-  glob_to_multiple: {
+  glob_to_multiple: { // if multiple files are given, this will keep the same folder structure and files
     expand: true,
     cwd: 'path/to',
     src: ['*.js'],
     dest: 'path/to/dest/',
     ext: '.js'
+  },
+
+  options: {
+    console: true,                          // don't remove console statements
+    debugger: true,                         // don't remove debugger statements
+    pragmas: ['development', 'validation'], // don't remove `development` and `validation` pragmas
+    namespace: ['App.logger'],              // Remove functions that live inside the App.logger namespace
+    replace: '"0"'                          // Replace removed statements for the given string (note the extra quotes)
   }
 }
 ```
