@@ -2,6 +2,7 @@
 
 Basic [gruntjs](https://github.com/gruntjs/grunt) task, wrapping aroung [groundskeeper](https://github.com/Couto/groundskeeper) to allow users to remove `console`, `debugger;`, specified pragmas and their own logging statements.
 
+[![Build Status](https://travis-ci.org/Couto/grunt-groundskeeper.png?branch=dev)](https://travis-ci.org/Couto/grunt-groundskeeper)
 
 ## Getting Started
 Install this grunt plugin next to your project's [grunt.js gruntfile][getting_started] with: `npm install grunt-groundskeeper`
