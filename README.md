@@ -26,11 +26,11 @@ grunt.loadNpmTasks('grunt-groundskeeper');
 ## Groundskeeper task
 _Run this task with the `grunt groundskeeper` command._
 
-k targets, files and options may be specified according to the grunt [Configuring tasks](http://gruntjs.com/configuring-tasks) guide.
+Task targets, files and options may be specified according to the grunt [Configuring tasks](http://gruntjs.com/configuring-tasks) guide.
 
 ### Options
 
-For a more detailed description of the available options please refer to the [groundskeeper\'s usage](https://github.com/Couto/groundskeeper#usage)
+For a more detailed description of the available options please refer to the [groundskeeper's usage](https://github.com/Couto/groundskeeper#usage)
 
 #### console
 Type: `boolean`
@@ -65,6 +65,9 @@ groundskeeper: {
     files: {
       'path/to/result.js': 'path/to/source.js', // 1:1 compile
       'path/to/another.js': ['path/to/sources/*.js', 'path/to/more/*.js'] // clean up and concat into single file
+    },
+    options: {  // this options only affect the compile task
+        console: false
     }
   },
 
@@ -91,10 +94,12 @@ For more examples on how to use the `expand` API shown in the `glob_to_multiple`
 
 ## Release History
 
- * 2013-02-20   v0.1.0   Add build status badge Rename Gruntfile.js Update .travis.yml to install grunt Add tests Add support for dynamic mappings Fix compatibility with grunt 0.4 (issue Update README.md Update deps
-
+ * 2013-02-20   v0.1.3   Fix compatibility with grunt 0.4. Remove 'keepStructure' option.
+ * 2012-12-     v0.1.2   Provide more output options. 
+ * 2012-12-     v0.1.1   
+ * 2012-12-     v0.1.0   First functional wrapper around groundskeeper 
 ---
 
 Task submitted by [Luis Couto](http://15minuteslate.net)
 
-*This file was generated on Wed Feb 20 2013 14:37:15.*
+*This file was generated on Wed Feb 20 2013 15:25:29.*

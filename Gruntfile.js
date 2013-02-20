@@ -33,12 +33,15 @@ module.exports = function (grunt) {
         },
 
         groundskeeper: {
-            clean: {
+            taskOne: {
                 files: {
                     'tmp/console.js': ['test/fixtures/console.js']
                 }
-            }
+            },
+
+            options: {}
         }
+
     });
 
     // Load tasks.

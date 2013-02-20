@@ -1,6 +1,6 @@
 # Options
 
-For a more detailed description of the available options please refer to the [groundskeeper\'s usage](https://github.com/Couto/groundskeeper#usage)
+For a more detailed description of the available options please refer to the [groundskeeper's usage](https://github.com/Couto/groundskeeper#usage)
 
 ## console
 Type: `boolean`

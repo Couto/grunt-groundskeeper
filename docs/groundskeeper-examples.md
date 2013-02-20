@@ -6,6 +6,9 @@ groundskeeper: {
     files: {
       'path/to/result.js': 'path/to/source.js', // 1:1 compile
       'path/to/another.js': ['path/to/sources/*.js', 'path/to/more/*.js'] // clean up and concat into single file
+    },
+    options: {  // this options only affect the compile task
+        console: false
     }
   },
 
