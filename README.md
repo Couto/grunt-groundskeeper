@@ -1,4 +1,4 @@
-# grunt-groundskeeper [![Build Status](https://secure.travis-ci.org/gruntjs/grunt-groundskeeper.png?branch=master)](http://travis-ci.org/gruntjs/grunt-groundskeeper)
+# grunt-groundskeeper [![Build Status](https://secure.travis-ci.org/gruntjs/grunt-groundskeeper.png?branch=dev)](http://travis-ci.org/gruntjs/grunt-groundskeeper)
 
 > Remove console statements, debugger and specific blocks of code
 
