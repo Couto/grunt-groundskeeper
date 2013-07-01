@@ -41,7 +41,7 @@
     "pragma"
   ],
   "dependencies": {
-    "groundskeeper": "~0.1.1",
+    "groundskeeper": "~0.1.3",
     "glob": "~3.1.20"
   },
   "devDependencies": {
