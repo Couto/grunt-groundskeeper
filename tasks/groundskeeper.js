@@ -13,12 +13,18 @@ module.exports = function (grunt) {
 
         var groundskeeper = require('groundskeeper'),
             options = this.options({ separator: grunt.util.linefeed }),
+            cleaned = 0,
             clean = function (file) {
                 var cleaner = groundskeeper(options),
-                    source = grunt.file.read(file);
+                    source = grunt.file.read(file),
+                    cleanSource;
 
                 cleaner.write(source);
-                return cleaner.toString();
+                cleanSource = cleaner.toString();
+
+                // logging purposes
+                if (cleanSource !== source) { cleaned += 1; }
+                return cleanSource;
             };
 
         grunt.verbose.writeflags(options, 'Options');
@@ -45,9 +51,12 @@ module.exports = function (grunt) {
             // Warn if file was empty or correctly created
             return (output.length < 1) ?
                     grunt.log.warn('File ' + files.dest + ' created empty, because its counterpart was empty.') :
-                    grunt.log.ok('File ' + files.dest + ' created.');
+                    grunt.verbose.writeln('File ' + files.dest + ' created.');
 
         });
+
+
+        grunt.log.oklns(this.files.length + ' files read, ' + cleaned + ' cleaned.');
 
     });
 
