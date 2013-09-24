@@ -2,7 +2,7 @@
  * grunt-groundskeeper
  * https://github.com/couto/grunt-groundskeeper
  *
- * Copyright (c) 2012 Couto
+ * Copyright (c) 2013 Couto
  * Licensed under the MIT license.
  */
 module.exports = function (grunt) {

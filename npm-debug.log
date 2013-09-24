@@ -1,0 +1,191 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/opt/boxen/nodenv/versions/v0.10.8/bin/node',
+1 verbose cli   '/opt/boxen/nodenv/versions/v0.10.8/bin/npm',
+1 verbose cli   'publish' ]
+2 info using npm@1.2.23
+3 info using node@v0.10.8
+4 verbose publish [ '.' ]
+5 verbose read json /Users/couto/src/grunt-groundskeeper/package.json
+6 verbose cache add [ '.', null ]
+7 verbose cache add name=undefined spec="." args=[".",null]
+8 verbose parsed url { protocol: null,
+8 verbose parsed url   slashes: null,
+8 verbose parsed url   auth: null,
+8 verbose parsed url   host: null,
+8 verbose parsed url   port: null,
+8 verbose parsed url   hostname: null,
+8 verbose parsed url   hash: null,
+8 verbose parsed url   search: null,
+8 verbose parsed url   query: null,
+8 verbose parsed url   pathname: '.',
+8 verbose parsed url   path: '.',
+8 verbose parsed url   href: '.' }
+9 silly lockFile 3a52ce78- .
+10 verbose lock . /Users/couto/.npm/3a52ce78-.lock
+11 verbose read json package.json
+12 verbose tar pack [ '/var/folders/vl/sr8pnr7d5dq4w1sztw0ldscc0000gn/T/npm-67771/1380040851523-0.8373098908923566/tmp.tgz',
+12 verbose tar pack   '.' ]
+13 verbose tarball /var/folders/vl/sr8pnr7d5dq4w1sztw0ldscc0000gn/T/npm-67771/1380040851523-0.8373098908923566/tmp.tgz
+14 verbose folder .
+15 info prepublish grunt-groundskeeper@0.1.4
+16 silly lockFile 3a52ce78- .
+17 verbose lock . /Users/couto/.npm/3a52ce78-.lock
+18 silly lockFile 0ae035ea-51523-0-8373098908923566-tmp-tgz /var/folders/vl/sr8pnr7d5dq4w1sztw0ldscc0000gn/T/npm-67771/1380040851523-0.8373098908923566/tmp.tgz
+19 verbose lock /var/folders/vl/sr8pnr7d5dq4w1sztw0ldscc0000gn/T/npm-67771/1380040851523-0.8373098908923566/tmp.tgz /Users/couto/.npm/0ae035ea-51523-0-8373098908923566-tmp-tgz.lock
+20 silly lockFile 3a52ce78- .
+21 silly lockFile 3a52ce78- .
+22 silly lockFile 0ae035ea-51523-0-8373098908923566-tmp-tgz /var/folders/vl/sr8pnr7d5dq4w1sztw0ldscc0000gn/T/npm-67771/1380040851523-0.8373098908923566/tmp.tgz
+23 silly lockFile 0ae035ea-51523-0-8373098908923566-tmp-tgz /var/folders/vl/sr8pnr7d5dq4w1sztw0ldscc0000gn/T/npm-67771/1380040851523-0.8373098908923566/tmp.tgz
+24 verbose tar unpack /var/folders/vl/sr8pnr7d5dq4w1sztw0ldscc0000gn/T/npm-67771/1380040851523-0.8373098908923566/tmp.tgz
+25 silly lockFile 6a63614b-51523-0-8373098908923566-package /var/folders/vl/sr8pnr7d5dq4w1sztw0ldscc0000gn/T/npm-67771/1380040851523-0.8373098908923566/package
+26 verbose lock /var/folders/vl/sr8pnr7d5dq4w1sztw0ldscc0000gn/T/npm-67771/1380040851523-0.8373098908923566/package /Users/couto/.npm/6a63614b-51523-0-8373098908923566-package.lock
+27 silly lockFile 0ae035ea-51523-0-8373098908923566-tmp-tgz /var/folders/vl/sr8pnr7d5dq4w1sztw0ldscc0000gn/T/npm-67771/1380040851523-0.8373098908923566/tmp.tgz
+28 verbose lock /var/folders/vl/sr8pnr7d5dq4w1sztw0ldscc0000gn/T/npm-67771/1380040851523-0.8373098908923566/tmp.tgz /Users/couto/.npm/0ae035ea-51523-0-8373098908923566-tmp-tgz.lock
+29 silly gunzTarPerm modes [ '755', '644' ]
+30 silly gunzTarPerm extractEntry package.json
+31 silly gunzTarPerm extractEntry .npmignore
+32 silly gunzTarPerm extractEntry README.md
+33 silly gunzTarPerm extractEntry Gruntfile.js
+34 silly gunzTarPerm extractEntry LICENSE-MIT
+35 silly gunzTarPerm extractEntry CHANGELOG
+36 silly gunzTarPerm extractEntry CONTRIBUTING.md
+37 silly gunzTarPerm extractEntry .editorconfig
+38 silly gunzTarPerm extractEntry .jshintrc
+39 silly gunzTarPerm extractEntry .travis.yml
+40 silly gunzTarPerm extractEntry bin/grunt-groundskeeper
+41 silly gunzTarPerm extractEntry docs/groundskeeper-examples.md
+42 silly gunzTarPerm extractEntry docs/groundskeeper-options.md
+43 silly gunzTarPerm extractEntry docs/groundskeeper-overview.md
+44 silly gunzTarPerm extractEntry docs/overview.md
+45 silly gunzTarPerm extractEntry tasks/groundskeeper.js
+46 silly gunzTarPerm extractEntry AUTHORS
+47 silly gunzTarPerm extractEntry test/groundskeeper_test.js
+48 silly gunzTarPerm extractEntry test/expected/console.js
+49 silly gunzTarPerm extractEntry test/fixtures/console.js
+50 verbose read json /var/folders/vl/sr8pnr7d5dq4w1sztw0ldscc0000gn/T/npm-67771/1380040851523-0.8373098908923566/package/package.json
+51 silly lockFile 6a63614b-51523-0-8373098908923566-package /var/folders/vl/sr8pnr7d5dq4w1sztw0ldscc0000gn/T/npm-67771/1380040851523-0.8373098908923566/package
+52 silly lockFile 6a63614b-51523-0-8373098908923566-package /var/folders/vl/sr8pnr7d5dq4w1sztw0ldscc0000gn/T/npm-67771/1380040851523-0.8373098908923566/package
+53 silly lockFile 0ae035ea-51523-0-8373098908923566-tmp-tgz /var/folders/vl/sr8pnr7d5dq4w1sztw0ldscc0000gn/T/npm-67771/1380040851523-0.8373098908923566/tmp.tgz
+54 silly lockFile 0ae035ea-51523-0-8373098908923566-tmp-tgz /var/folders/vl/sr8pnr7d5dq4w1sztw0ldscc0000gn/T/npm-67771/1380040851523-0.8373098908923566/tmp.tgz
+55 verbose from cache /var/folders/vl/sr8pnr7d5dq4w1sztw0ldscc0000gn/T/npm-67771/1380040851523-0.8373098908923566/package/package.json
+56 verbose tar pack [ '/Users/couto/.npm/grunt-groundskeeper/0.1.4/package.tgz',
+56 verbose tar pack   '/var/folders/vl/sr8pnr7d5dq4w1sztw0ldscc0000gn/T/npm-67771/1380040851523-0.8373098908923566/package' ]
+57 verbose tarball /Users/couto/.npm/grunt-groundskeeper/0.1.4/package.tgz
+58 verbose folder /var/folders/vl/sr8pnr7d5dq4w1sztw0ldscc0000gn/T/npm-67771/1380040851523-0.8373098908923566/package
+59 silly lockFile 6a63614b-51523-0-8373098908923566-package /var/folders/vl/sr8pnr7d5dq4w1sztw0ldscc0000gn/T/npm-67771/1380040851523-0.8373098908923566/package
+60 verbose lock /var/folders/vl/sr8pnr7d5dq4w1sztw0ldscc0000gn/T/npm-67771/1380040851523-0.8373098908923566/package /Users/couto/.npm/6a63614b-51523-0-8373098908923566-package.lock
+61 silly lockFile 0976f2cd--groundskeeper-0-1-4-package-tgz /Users/couto/.npm/grunt-groundskeeper/0.1.4/package.tgz
+62 verbose lock /Users/couto/.npm/grunt-groundskeeper/0.1.4/package.tgz /Users/couto/.npm/0976f2cd--groundskeeper-0-1-4-package-tgz.lock
+63 silly lockFile 6a63614b-51523-0-8373098908923566-package /var/folders/vl/sr8pnr7d5dq4w1sztw0ldscc0000gn/T/npm-67771/1380040851523-0.8373098908923566/package
+64 silly lockFile 6a63614b-51523-0-8373098908923566-package /var/folders/vl/sr8pnr7d5dq4w1sztw0ldscc0000gn/T/npm-67771/1380040851523-0.8373098908923566/package
+65 silly lockFile 0976f2cd--groundskeeper-0-1-4-package-tgz /Users/couto/.npm/grunt-groundskeeper/0.1.4/package.tgz
+66 silly lockFile 0976f2cd--groundskeeper-0-1-4-package-tgz /Users/couto/.npm/grunt-groundskeeper/0.1.4/package.tgz
+67 silly lockFile 61f4e867-runt-groundskeeper-0-1-4-package /Users/couto/.npm/grunt-groundskeeper/0.1.4/package
+68 verbose lock /Users/couto/.npm/grunt-groundskeeper/0.1.4/package /Users/couto/.npm/61f4e867-runt-groundskeeper-0-1-4-package.lock
+69 silly lockFile 61f4e867-runt-groundskeeper-0-1-4-package /Users/couto/.npm/grunt-groundskeeper/0.1.4/package
+70 silly lockFile 61f4e867-runt-groundskeeper-0-1-4-package /Users/couto/.npm/grunt-groundskeeper/0.1.4/package
+71 verbose tar unpack /Users/couto/.npm/grunt-groundskeeper/0.1.4/package.tgz
+72 silly lockFile 61f4e867-runt-groundskeeper-0-1-4-package /Users/couto/.npm/grunt-groundskeeper/0.1.4/package
+73 verbose lock /Users/couto/.npm/grunt-groundskeeper/0.1.4/package /Users/couto/.npm/61f4e867-runt-groundskeeper-0-1-4-package.lock
+74 silly lockFile 0976f2cd--groundskeeper-0-1-4-package-tgz /Users/couto/.npm/grunt-groundskeeper/0.1.4/package.tgz
+75 verbose lock /Users/couto/.npm/grunt-groundskeeper/0.1.4/package.tgz /Users/couto/.npm/0976f2cd--groundskeeper-0-1-4-package-tgz.lock
+76 silly gunzTarPerm modes [ '755', '644' ]
+77 silly gunzTarPerm extractEntry package.json
+78 silly gunzTarPerm extractEntry .npmignore
+79 silly gunzTarPerm extractEntry README.md
+80 silly gunzTarPerm extractEntry Gruntfile.js
+81 silly gunzTarPerm extractEntry AUTHORS
+82 silly gunzTarPerm extractEntry CHANGELOG
+83 silly gunzTarPerm extractEntry CONTRIBUTING.md
+84 silly gunzTarPerm extractEntry .jshintrc
+85 silly gunzTarPerm extractEntry LICENSE-MIT
+86 silly gunzTarPerm extractEntry .editorconfig
+87 silly gunzTarPerm extractEntry bin/grunt-groundskeeper
+88 silly gunzTarPerm extractEntry docs/groundskeeper-examples.md
+89 silly gunzTarPerm extractEntry docs/groundskeeper-options.md
+90 silly gunzTarPerm extractEntry docs/groundskeeper-overview.md
+91 silly gunzTarPerm extractEntry docs/overview.md
+92 silly gunzTarPerm extractEntry .travis.yml
+93 silly gunzTarPerm extractEntry tasks/groundskeeper.js
+94 silly gunzTarPerm extractEntry test/groundskeeper_test.js
+95 silly gunzTarPerm extractEntry test/expected/console.js
+96 silly gunzTarPerm extractEntry test/fixtures/console.js
+97 verbose read json /Users/couto/.npm/grunt-groundskeeper/0.1.4/package/package.json
+98 silly lockFile 61f4e867-runt-groundskeeper-0-1-4-package /Users/couto/.npm/grunt-groundskeeper/0.1.4/package
+99 silly lockFile 61f4e867-runt-groundskeeper-0-1-4-package /Users/couto/.npm/grunt-groundskeeper/0.1.4/package
+100 silly lockFile 0976f2cd--groundskeeper-0-1-4-package-tgz /Users/couto/.npm/grunt-groundskeeper/0.1.4/package.tgz
+101 silly lockFile 0976f2cd--groundskeeper-0-1-4-package-tgz /Users/couto/.npm/grunt-groundskeeper/0.1.4/package.tgz
+102 verbose from cache /Users/couto/.npm/grunt-groundskeeper/0.1.4/package/package.json
+103 verbose chmod /Users/couto/.npm/grunt-groundskeeper/0.1.4/package.tgz 644
+104 verbose chown /Users/couto/.npm/grunt-groundskeeper/0.1.4/package.tgz [ 501, 20 ]
+105 silly lockFile 3a52ce78- .
+106 silly publish { name: 'grunt-groundskeeper',
+106 silly publish   description: 'Remove console statements, debugger and specific blocks of code',
+106 silly publish   version: '0.1.4',
+106 silly publish   homepage: 'https://github.com/couto/grunt-groundskeeper',
+106 silly publish   author:
+106 silly publish    { name: 'Couto',
+106 silly publish      email: 'couto@15minuteslate.net',
+106 silly publish      url: 'http://15minuteslate.net' },
+106 silly publish   repository:
+106 silly publish    { type: 'git',
+106 silly publish      url: 'git://github.com/couto/grunt-groundskeeper.git' },
+106 silly publish   bugs: { url: 'https://github.com/couto/grunt-groundskeeper/issues' },
+106 silly publish   licenses:
+106 silly publish    [ { type: 'MIT',
+106 silly publish        url: 'https://github.com/couto/grunt-groundskeeper/blob/master/LICENSE-MIT' } ],
+106 silly publish   main: 'grunt.js',
+106 silly publish   bin: { 'grunt-groundskeeper': 'bin/grunt-groundskeeper' },
+106 silly publish   engines: { node: '>= 0.8' },
+106 silly publish   scripts: { test: 'grunt test' },
+106 silly publish   keywords:
+106 silly publish    [ 'gruntplugin',
+106 silly publish      'console',
+106 silly publish      'logging',
+106 silly publish      'remove',
+106 silly publish      'clean',
+106 silly publish      'groundskeeper',
+106 silly publish      'debugger',
+106 silly publish      'pragmas',
+106 silly publish      'pragma' ],
+106 silly publish   dependencies: { groundskeeper: '~0.1.4', glob: '~3.1.21' },
+106 silly publish   devDependencies:
+106 silly publish    { 'grunt-contrib-jshint': '0.1.1rc6',
+106 silly publish      'grunt-contrib-watch': '0.2.0rc7',
+106 silly publish      'grunt-contrib-nodeunit': '0.1.2',
+106 silly publish      'grunt-contrib-clean': '~0.4.0',
+106 silly publish      'grunt-contrib-internal': '~0.4.2' },
+106 silly publish   peerDependencies: { grunt: '~0.4.0' },
+106 silly publish   contributors: [ { name: 'Luis Couto', url: 'http://15minuteslate.net' } ],
+106 silly publish   readme: '# grunt-groundskeeper [![Build Status](https://secure.travis-ci.org/Couto/grunt-groundskeeper.png?branch=master)](http://travis-ci.org/Couto/grunt-groundskeeper)\n\n> Remove console statements, debugger and specific blocks of code\n\n\n\n## Getting Started\nThis plugin requires Grunt `~0.4.0`\n\nIf you haven\'t used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you\'re familiar with that process, you may install this plugin with this command:\n\n```shell\nnpm install grunt-groundskeeper --save-dev\n```\n\nOne the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:\n\n```js\ngrunt.loadNpmTasks(\'grunt-groundskeeper\');\n```\n\n*This plugin was designed to work with Grunt 0.4.x. If you\'re still using grunt v0.3.x it\'s strongly recommended that [you upgrade](http://gruntjs.com/upgrading-from-0.3-to-0.4), but in case you can\'t please use [v0.3.2](https://github.com/gruntjs/grunt-contrib-coffee/tree/grunt-0.3-stable).*\n\n\n\n## Groundskeeper task\n_Run this task with the `grunt groundskeeper` command._\n\nTask targets, files and options may be specified according to the grunt [Configuring tasks](http://gruntjs.com/configuring-tasks) guide.\n\n### Options\n\nFor a more detailed description of the available options please refer to the [groundskeeper\'s usage](https://github.com/Couto/groundskeeper#usage)\n\n#### console\nType: `boolean`\n\nIf true, it will keep `console` statements.\n\n#### debugger\nType: `boolean`\n\nIf true, it will keep `debugger;` statements.\n\n#### pragmas\nType: `Array`\n\nIt will keep pragmas with the specified identifiers.\n\n#### namespace\nType: `Array`\n\nRemove custom logging utilities that live in the given namespace.\n\n#### replace\nType: `String`\n\nIf the simple removal of statements causes errors, use this option to replace them for a given string.\n\n### Usage Examples\n\n```js\ngroundskeeper: {\n  compile: {\n    files: {\n      \'path/to/result.js\': \'path/to/source.js\', // 1:1 compile\n      \'path/to/another.js\': [\'path/to/sources/*.js\', \'path/to/more/*.js\'] // clean up and concat into single file\n    },\n    options: {  // this options only affect the compile task\n        console: false\n    }\n  },\n\n  glob_to_multiple: { // if multiple files are given, this will keep the same folder structure and files\n    expand: true,\n    cwd: \'path/to\',\n    src: [\'*.js\'],\n    dest: \'path/to/dest/\',\n    ext: \'.js\'\n  },\n\n  options: {\n    console: true,                          // don\'t remove console statements\n    debugger: true,                         // don\'t remove debugger statements\n    pragmas: [\'development\', \'validation\'], // don\'t remove `development` and `validation` pragmas\n    namespace: [\'App.logger\'],              // Remove functions that live inside the App.logger namespace\n    replace: \'"0"\'                          // Replace removed statements for the given string (note the extra quotes)\n  }\n}\n```\n\nFor more examples on how to use the `expand` API shown in the `glob_to_multiple` example, see "Building the files object dynamically" in the grunt wiki entry [Configuring Tasks](http://gruntjs.com/configuring-tasks).\n\n\n## Release History\n\n * 2013-09-24   v0.1.4   Upgrade dependencies.\n * 2013-02-20   v0.1.3   Fix compatibility with grunt 0.4. Remove \'keepStructure\' option.\n * 2012-12-14   v0.1.2   Provide more output options. \n * 2012-12-14   v0.1.1   Provide options and documentation.\n * 2012-12-14   v0.1.0   First functional wrapper around groundskeeper. \n\n---\n\nTask submitted by [Luis Couto](http://15minuteslate.net)\n\n*This file was generated on Tue Sep 24 2013 17:38:45.*\n',
+106 silly publish   readmeFilename: 'README.md',
+106 silly publish   _id: 'grunt-groundskeeper@0.1.4',
+106 silly publish   dist: { shasum: 'a1bb42f87b50fe19d592eaeb6e3e43e478fc5975' },
+106 silly publish   _from: '.' }
+107 verbose url raw grunt-groundskeeper
+108 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-groundskeeper' ]
+109 verbose url resolved https://registry.npmjs.org/grunt-groundskeeper
+110 info trying registry request attempt 1 at 17:41:51
+111 http PUT https://registry.npmjs.org/grunt-groundskeeper
+112 http 409 https://registry.npmjs.org/grunt-groundskeeper
+113 verbose url raw grunt-groundskeeper
+114 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-groundskeeper' ]
+115 verbose url resolved https://registry.npmjs.org/grunt-groundskeeper
+116 info trying registry request attempt 1 at 17:41:52
+117 http GET https://registry.npmjs.org/grunt-groundskeeper
+118 http 200 https://registry.npmjs.org/grunt-groundskeeper
+119 error publish fail Cannot publish over existing version.
+119 error publish fail Update the 'version' field in package.json and try again.
+119 error publish fail
+119 error publish fail If the previous version was published in error, see:
+119 error publish fail     npm help unpublish
+119 error publish fail
+119 error publish fail To automatically increment version numbers, see:
+119 error publish fail     npm help version
+120 error System Darwin 12.5.0
+121 error command "/opt/boxen/nodenv/versions/v0.10.8/bin/node" "/opt/boxen/nodenv/versions/v0.10.8/bin/npm" "publish"
+122 error cwd /Users/couto/src/grunt-groundskeeper
+123 error node -v v0.10.8
+124 error npm -v 1.2.23
+125 error code EPUBLISHCONFLICT
+126 verbose exit [ 1, true ]
