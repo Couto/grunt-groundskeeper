@@ -1,7 +1,7 @@
 {
   "name": "grunt-groundskeeper",
   "description": "Remove console statements, debugger and specific blocks of code",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "homepage": "https://github.com/couto/grunt-groundskeeper",
   "author": {
     "name": "Couto",
@@ -41,7 +41,7 @@
     "pragma"
   ],
   "dependencies": {
-    "groundskeeper": "~0.1.4",
+    "groundskeeper": "~0.1.5",
     "glob": "~3.1.21"
   },
   "devDependencies": {
