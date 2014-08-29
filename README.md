@@ -3,6 +3,14 @@
 > Remove console statements, debugger and specific blocks of code
 
 
+## Notice
+If you're using [UglifyJS2](https://github.com/mishoo/UglifyJS2) then you most likely don't need this package at all.
+You can just use the `drop_debugger` and `drop_console` to achieve the same effect.
+
+If you're using the pragmas function, you might achieve the same effect using [conditional compilation](https://github.com/mishoo/UglifyJS2#conditional-compilation).
+
+On the other hand if you don't use UglifyJS2 then go ahead and keep reading :)
+
 
 ## Getting Started
 This plugin requires Grunt `~0.4.0`
